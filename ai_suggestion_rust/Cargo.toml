@@ -1,0 +1,13 @@
+[package]
+name = "health_suggestion_service"
+version = "0.1.0"
+edition = "2021"  # Set to 2021 edition to support async syntax
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "4.0"           # For the HTTP server
+serde = { version = "1.0", features = ["derive"] }  # For serialization/deserialization
+reqwest = { version = "0.12.9", features = ["json"] } # For making HTTP requests
+serde_json = "1.0"          # For handling JSON
+tokio = { version = "1.0", features = ["full"] }    # Required by reqwest for async support
